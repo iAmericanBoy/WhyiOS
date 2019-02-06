@@ -53,12 +53,28 @@
 			isa = PBXGroup;
 			children = (
 				B6E91D24220B7E2A00C47B9E /* AppDelegate.swift */,
-				B6E91D28220B7E2A00C47B9E /* Main.storyboard */,
+				B6E91D37220B7F0D00C47B9E /* Views */,
+				B6E91D36220B7F0000C47B9E /* Resources */,
+			);
+			path = WhyiOS;
+			sourceTree = "<group>";
+		};
+		B6E91D36220B7F0000C47B9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				B6E91D2B220B7E2E00C47B9E /* Assets.xcassets */,
 				B6E91D2D220B7E2E00C47B9E /* LaunchScreen.storyboard */,
 				B6E91D30220B7E2E00C47B9E /* Info.plist */,
 			);
-			path = WhyiOS;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6E91D37220B7F0D00C47B9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6E91D28220B7E2A00C47B9E /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
