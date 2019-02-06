@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Post: Codable {
+struct Post: Codable {
     let name: String
     let cohort: String
     let reason: String

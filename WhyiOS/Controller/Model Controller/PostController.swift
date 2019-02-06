@@ -16,6 +16,43 @@ class PostController {
     
     
     //MARK: - Create
+    static func postReason(name: String, reason:String, completion: @escaping (Bool) -> Void) {
+        guard let fullUrl = baseURL?.appendingPathExtension("json") else {
+            print("Could not unwrap baseURl")
+            completion(false)
+            return
+        }
+        
+        let newReason = Post(name: name, cohort: "iOS 24", reason: reason)
+        var postData: Data
+        
+        do {
+            let encoder = JSONEncoder()
+            postData = try encoder.encode(newReason)
+        } catch  {
+            print("Error encoding PostData: \(error) \(error.localizedDescription) ")
+            completion(false)
+            return
+        }
+        var request = URLRequest(url: fullUrl)
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let dataTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
+            if let error = error {
+                completion(false)
+                print("Error has posting occured: \(error), \(error.localizedDescription)")
+                return
+            }
+            guard data != nil else {
+                print("Data could not be unwrapped")
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+        dataTask.resume()
+    }
     
     //MARK: - Read
     static func fetchPosts(completion: @escaping (Bool,[Post]) -> Void) {
