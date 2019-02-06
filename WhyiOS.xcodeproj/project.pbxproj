@@ -12,6 +12,7 @@
 		B6E91D2C220B7E2E00C47B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E91D2B220B7E2E00C47B9E /* Assets.xcassets */; };
 		B6E91D2F220B7E2E00C47B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E91D2D220B7E2E00C47B9E /* LaunchScreen.storyboard */; };
 		B6FCF58C220B7FCA00EE0909 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF58B220B7FCA00EE0909 /* Post.swift */; };
+		B6FCF58F220B809100EE0909 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCF58E220B809100EE0909 /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B6E91D2E220B7E2E00C47B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6E91D30220B7E2E00C47B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6FCF58B220B7FCA00EE0909 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B6FCF58E220B809100EE0909 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				B6E91D24220B7E2A00C47B9E /* AppDelegate.swift */,
 				B6FCF58D220B7FD000EE0909 /* Model */,
 				B6E91D37220B7F0D00C47B9E /* Views */,
+				B6FCF590220B80A300EE0909 /* Controller */,
 				B6E91D36220B7F0000C47B9E /* Resources */,
 			);
 			path = WhyiOS;
@@ -86,6 +89,22 @@
 				B6FCF58B220B7FCA00EE0909 /* Post.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B6FCF590220B80A300EE0909 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF592220B80B700EE0909 /* Model Controller */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B6FCF592220B80B700EE0909 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCF58E220B809100EE0909 /* PostController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +180,7 @@
 			files = (
 				B6E91D25220B7E2A00C47B9E /* AppDelegate.swift in Sources */,
 				B6FCF58C220B7FCA00EE0909 /* Post.swift in Sources */,
+				B6FCF58F220B809100EE0909 /* PostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6B8ZX28ZW;
-				INFOPLIST_FILE = WhyiOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WhyiOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6B8ZX28ZW;
-				INFOPLIST_FILE = WhyiOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WhyiOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
